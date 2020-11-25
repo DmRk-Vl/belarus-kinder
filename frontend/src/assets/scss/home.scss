@@ -1,0 +1,34 @@
+.home-image-1, .home-image-2 {
+    flex-shrink: 0;
+    width: 40%;
+    height: 200px;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.home-image-1 {
+    background-image: url("~assets/img/header1.jpg");
+}
+
+.home-image-2 {
+    background-image: url("~assets/img/header2.jpg");
+}
+
+.text-with-image--first {
+    padding-right: 40px;
+    margin-right: 40px;
+    border-right: 2px solid #5FD4B1;
+
+    text-align: justify;
+}
+
+.text-with-image--second {
+    padding-left: 40px;
+    margin-left: 40px;
+    border-left: 2px solid #5FD4B1;
+
+
+    text-align: justify;
+}
+
+

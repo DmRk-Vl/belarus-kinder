@@ -1,0 +1,36 @@
+<div class="article">
+    <div class="container">
+        <div class="details">
+            <p class="author">{{article.authorName}} <span *ngIf="authService.isAuthenticated()" class="subscribe" (click)="subscribe()">Subscribe</span></p>
+            <p class="date">{{article.date.toFormat('HH:mm yyyy LLL dd')}}
+                <a *ngIf="authService.isAdmin()" class="btn-edit" [routerLink]="'/article-editor/' + article.id">Edit</a>
+            </p>
+        </div>
+
+        <h2>{{article.title}}</h2>
+
+        <div class="preview"
+             [ngStyle]="{ 'background-image': 'url(' + article?.image + ')' } ">
+        </div>
+
+        <div [innerHTML]="article.body"></div>
+
+        <div *ngFor="let comment of comments">
+            <div class="comment">
+                <div class="ava"></div>
+                <span class="name">{{comment.authorName}}</span>
+                <span class="date">{{comment.createdAt.toFormat('HH:mm yyyy LLL dd')}}</span>
+                <p>{{comment.message}}</p>
+            </div>
+        </div>
+
+        <div class="comment-editor">
+            <div>
+                <label for="float-input">New comment</label><br>
+                <input #comment_input class="comment-input" id="float-input" data-label="ds" type="text" size="30" [(ngModel)]="commentMessage">
+            </div>
+
+            <button class="btn btn-send" type="button" (click)="sendComment()">Send</button>
+        </div>
+    </div>
+</div>

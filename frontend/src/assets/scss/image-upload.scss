@@ -1,0 +1,36 @@
+.image-upload {
+    width: 300px;
+
+    .preview {
+        background: no-repeat center;
+        background-size: cover;
+        height: 200px;
+        width: 100%;
+        border: 1px solid #00A876;
+        border-bottom: none;
+    }
+
+    .btn {
+        &.btn-select {
+            background-color: white;
+            color: #00A876;
+
+            &:active {
+                background-color: #00A876;
+                color: white;
+                border-bottom-color: white;
+            }
+        }
+        &.btn-upload {
+            margin-top: -1px;
+            border-top: none !important;
+            background-color: #00A876;
+            color: white;
+
+            &:active {
+                background-color: white;
+                color: #00A876;
+            }
+        }
+    }
+}

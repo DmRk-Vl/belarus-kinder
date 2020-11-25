@@ -1,0 +1,35 @@
+.about {
+    p {
+        padding-bottom: 20px;
+        font-size: 28px;
+        font-weight: 100;
+    }
+
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .about-actions {
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .btn-contact {
+            width: 300px;
+            background-color: white;
+            border-color: #00A876;
+            color: #00A876;
+
+            &:hover {
+                border-color: white;
+                background-color: #00A876;
+                color: white;
+            }
+        }
+
+        .btn-donate {
+            width: 300px;
+        }
+    }
+}

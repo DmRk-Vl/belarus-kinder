@@ -1,0 +1,43 @@
+<notifier-container></notifier-container>
+
+<div class="editor">
+    <div class="container">
+        <h2>Article editor</h2>
+
+        <div class="top-flex">
+            <div class="vertical-flex">
+                <div>
+                    <label for="title-input">Title</label><br>
+                    <input class="title-input" id="title-input" data-label="ds" type="text" size="30" [(ngModel)]="article.title">
+                </div>
+                <div>
+                    <span>Group</span><br>
+                    <p-dropdown [options]="options" [(ngModel)]="article.group"></p-dropdown>
+                </div>
+            </div>
+            <div>
+                <image-upload class="preview-loader" [image]="article.image" (uploaded)="setImage($event)"></image-upload>
+            </div>
+        </div>
+
+        <div class="description-input">
+            <label for="description-input">Description</label><br>
+            <input class="title-input" id="description-input" data-label="ds" type="text" size="30" [(ngModel)]="article.description">
+        </div>
+
+        <span>Body</span>
+        <editor *ngIf="!!form.get('body').value" [control]="form.get('body')"></editor>
+
+
+<!--        <div class="ui-editor-container">-->
+<!--            <p-editor [(ngModel)]="article.body" [style]="{'height':'320px'}" [modules]="toolbar">-->
+<!--                <p-header></p-header>-->
+<!--            </p-editor>-->
+<!--        </div>-->
+
+        <div class="article-editor__actions">
+            <button class="btn btn-save" type="button" (click)="save()">Save</button>
+            <button class="btn btn-remove" type="button" (click)="remove()">Remove article</button>
+        </div>
+    </div>
+</div>

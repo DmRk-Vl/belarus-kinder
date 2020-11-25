@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="profile">
+        <div class="profile-info-container">
+            <div class="profile-info">
+                <h2>Profile</h2>
+
+                <h3>First Name: {{authService.isAdmin() ? 'Dmitrii' : 'firstName'}}</h3>
+                <h3>Last Name: {{authService.isAdmin() ? 'Rakitin' : 'lastName'}}</h3>
+                <h3>Email: {{authService.isAdmin() ? 'rakitin.dmit@gmail.com' : 'user@gmail.com'}}</h3>
+            </div>
+            <div class="profile-update">
+                <h2>Update profile</h2>
+                <form [formGroup]="profileForm" (ngSubmit)="update()">
+                    <span>Password</span>
+                    <input class="input"
+                           name="currentPassword"
+                           type="password"
+                           formControlName="currentPassword" />
+                    <span>New Password</span>
+                    <input class="input"
+                           name="newPassword"
+                           type="password"
+                           formControlName="newPassword" />
+                    <span>Confirm Password</span>
+                    <input class="input"
+                           name="confirmPassword"
+                           type="password"
+                           formControlName="confirmPassword" />
+
+                    <button class="btn btn-save" [disabled]="profileForm.invalid">
+                        Update
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div *ngIf="authService.isAdmin()">
+            <div>
+                <h2>Messages</h2>
+                <span>From: user@gmail.com</span><br>
+                <span>Author: firstName lastName</span>
+
+                <p class="private-message">Some message</p>
+                <button *ngIf="!visibleMessageForm" class="btn btn-answer" type="button" (click)="showMessageForm()">Answer</button>
+            </div>
+            <div class="send-form">
+                <div *ngIf="visibleMessageForm">
+                    <message (messageWasSent)="visibleMessageForm = false"></message>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

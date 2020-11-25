@@ -1,0 +1,27 @@
+.contacts {
+    h2 {
+        margin-top: 50px;
+    }
+
+    h3 {
+        padding-top: 40px;
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    td {
+        padding: 10px;
+        border: #00A876 1px solid;
+    }
+
+    .btn-download-report {
+        width: 50%;
+        margin: 70px 0;
+    }
+}

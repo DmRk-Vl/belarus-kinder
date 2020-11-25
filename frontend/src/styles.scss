@@ -1,0 +1,246 @@
+@import "assets/scss/header";
+@import "assets/scss/footer";
+@import "assets/scss/actions";
+@import "assets/scss/home";
+@import "assets/scss/editor";
+@import "assets/scss/image-upload";
+@import "assets/scss/article";
+@import "assets/scss/news";
+@import "assets/scss/about";
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open Sans", "Myriad Pro", sans-serif;
+    line-height: 1.8;
+
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 900px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.container {
+    width: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    border: 1px #00A876 solid;
+    background-color: #00A876;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    transition: all 100ms ease !important;
+    outline: none !important;
+}
+
+.btn.btn-remove {
+    border: none;
+    background-color: unset;
+    color: black;
+}
+
+.btn.btn-remove:hover {
+    border: none !important;
+    background-color: unset !important;
+    color: #cccccc;
+}
+
+.btn:hover {
+    border: 1px #00A876 solid;
+    background-color: rgba(0, 168, 118, 0.5) !important;
+    color: white;
+}
+
+.btn:active {
+    border: none !important;
+    background-color: white !important;
+    color: #00A876 !important;
+}
+
+.btn:disabled {
+    border: #00A876;
+    background-color: #cccccc;
+    color: white;
+}
+
+.notifier__container {
+    z-index: 1001;
+    position: fixed;
+    top: 200px;
+    right: 10px;
+    width: 400px;
+
+    ul {
+        list-style-type: none;
+    }
+
+    &-list {
+        position: relative;
+        height: 0;
+        .notifier__notification {
+            display: block;
+            padding: 20px;
+            width: 100%;
+            background-color: white;
+
+            &--success {
+                border: 2px solid #00A876;
+                color: #00A876;
+            }
+
+            &--error {
+                border: 2px solid red;
+                color: red;
+            }
+        }
+
+        .notifier__notification-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: none;
+            content: none;
+
+            svg {
+                display: none;
+            }
+        }
+    }
+}
+
+.ui-dropdown {
+    left: 1px;
+    position: relative;
+    width: 100%;
+    border: #cccccc 1px solid;
+    height: 60px;
+    font-size: 20px;
+
+    input {
+        width: 100%;
+        height: 58px;
+        border: none;
+    }
+}
+
+.ui-dropdown-label {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 30px;
+    line-height: 60px;
+}
+
+.ui-dropdown-items {
+    position: relative;
+    top: 1px;
+    width: calc(100% + 2px);
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.2);
+
+    .ui-dropdown-item {
+        line-height: 60px;
+        height: 60px;
+        width: 100%;
+        padding-left: 30px;
+        border-bottom: 1px solid #cccccc;
+
+        &:hover {
+            background-color: rgba(0, 168, 118, 0.7);
+        }
+    }
+}
+
+
+
+.wrapper {
+    width: 100%;
+}
+
+@for $i from 0 through 300 {
+    $width: $i * 5;
+
+    .h-#{width}px {
+        height: 5px * $i;
+    }
+
+    .pt-#{$width}px {
+        padding-top: 5px * $i
+    }
+    .pb-#{$width}px {
+        padding-bottom: 5px * $i
+    }
+    .pl-#{$width}px {
+        padding-left: 5px * $i
+    }
+    .pr-#{$width}px {
+        padding-right: 5px * $i
+    }
+
+    .mt-#{$width}px {
+        margin-top: 5px * $i
+    }
+    .mb-#{$width}px {
+        margin-bottom: 5px * $i
+    }
+    .ml-#{$width}px {
+        margin-left: 5px * $i
+    }
+    .mr-#{$width}px {
+        margin-right: 5px * $i
+    }
+
+    .pv-#{$width}px {
+        padding-top: 5px * $i;
+        padding-bottom: 5px * $i;
+    }
+    .pw-#{$width}px {
+        padding-left: 5px * $i;
+        padding-right: 5px * $i;
+    }
+    .mv-#{$width}px {
+        margin-top: 5px * $i;
+        margin-bottom: 5px * $i;
+    }
+    .mw-#{$width}px {
+        margin-left: 5px * $i;
+        margin-right: 5px * $i;
+    }
+
+    .pa-#{$width}px {
+        padding: 5px * $i;
+    }
+    .ma-#{$width}px {
+        margin: 5px * $i;
+    }
+}
+

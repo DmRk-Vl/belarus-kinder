@@ -1,0 +1,57 @@
+.profile {
+    margin-top: 50px;
+
+    &-info-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-info {
+        width: 50%;
+        padding-right: 50px;
+        border-right: 1px solid #00A876;
+    }
+
+    &-update {
+        margin-left: 50px;
+        width: 40%;
+    }
+
+    .input {
+        border: 1px #00A876 solid;
+        width: 100%;
+        padding-left: 30px;
+        display: block;
+        font-size: 20px;
+        height: 60px;
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        font-weight: 100;
+    }
+
+    h2 {
+        padding: 0 0 40px;
+    }
+
+    .btn {
+        margin-bottom: 50px;
+    }
+
+    .send-form {
+        margin: 50px 0;
+    }
+
+    .btn-answer {
+        margin-top: 40px;
+    }
+
+    .private-message {
+        width: 100%;
+        border-top: 1px solid #cccccc;
+        padding: 30px;
+        font-weight: 400;
+        font-size: 18px;
+    }
+}

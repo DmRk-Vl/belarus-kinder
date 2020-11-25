@@ -1,0 +1,23 @@
+.editor {
+    height: 400px;
+
+    .canvas {
+        border: #cccccc 1px solid;
+        width: 100%;
+        padding: 15px;
+        height: 100%;
+    }
+
+    &__body {
+        .textarea {
+            resize: vertical;
+
+            padding: 15px;
+
+            font-size: 20px;
+
+            width: 100%;
+            min-height: 200px;
+        }
+    }
+}

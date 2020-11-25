@@ -1,0 +1,124 @@
+.article {
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+        color: #00A876;
+
+        .author, .date {
+            font-size: 24px;
+        }
+        .subscribe {
+            position: relative;
+            top: -1px;
+            cursor: pointer;
+            font-size: 18px;
+            border: 1px solid #00A876;
+            border-radius: 20px;
+            color: #00A876;
+            padding: 5px 10px;
+            transition: all 200ms ease;
+
+            &:hover {
+                color: white;
+                background-color: #00A876;
+            }
+        }
+    }
+
+    padding-top: 100px;
+
+    .container {
+        position: relative;
+
+        .btn-edit {
+            position: relative;
+            top: -1px;
+            cursor: pointer;
+            font-size: 18px;
+            border: 1px solid #00A876;
+            border-radius: 20px;
+            color: #00A876;
+            padding: 5px 10px;
+            transition: all 200ms ease;
+
+            &:hover {
+                color: white;
+                background-color: #00A876;
+            }
+        }
+    }
+
+    .comment-editor {
+        border-top: 1px solid #cccccc;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+        margin-bottom: 80px;
+
+        .comment-input {
+            border: 1px #ccc solid;
+            padding-left: 30px;
+            width: 100%;
+            display: block;
+            font-size: 20px;
+            height: 60px;
+            margin-bottom: 50px;
+        }
+
+        .btn-send {
+            margin-top: 29px;
+            width: 300px;
+        }
+    }
+
+    .preview {
+        width: 100%;
+        height: 500px;
+        background-size: contain;
+        background: no-repeat center;
+        margin-bottom: 60px;
+    }
+
+    p {
+        padding-bottom: 20px;
+        font-size: 24px;
+        font-weight: 100;
+    }
+
+    .comment {
+        border-top: #cccccc 1px solid;
+        padding-left: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        position: relative;
+        .ava {
+            position: absolute;
+            height: 90px;
+            width: 90px;
+            border-radius: 100px;
+            background: url("https://sun9-4.userapi.com/c855428/v855428333/23a301/7P8tB8EFFys.jpg") center;
+            background-size: contain;
+        }
+
+        .date {
+            position: absolute;
+            right: 40px;
+            font-size: 20px;
+            color: grey;
+            padding-left: 110px;
+        }
+
+        .name {
+            font-size: 24px;
+            color: grey;
+            padding-left: 110px;
+        }
+
+        p {
+            font-size: 24px;
+            padding-left: 110px;
+        }
+    }
+}

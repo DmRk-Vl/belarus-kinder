@@ -1,0 +1,52 @@
+.editor {
+    position: relative;
+
+    h2 {
+        margin-top: 50px;
+    }
+
+    .ui-editor-container {
+        position: relative;
+        z-index: 5;
+    }
+
+    .title-input {
+        border: 1px #ccc solid;
+        padding-left: 30px;
+        width: 100%;
+        display: block;
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .top-flex {
+        .vertical-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .description-input {
+        margin: 50px 0;
+    }
+
+    .btn-save {
+        width: 50%;
+        margin: 80px 0;
+    }
+
+    .article-editor__actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .btn-remove {
+            width: 20%;
+            margin: 80px 0;
+        }
+    }
+}

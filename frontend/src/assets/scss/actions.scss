@@ -1,0 +1,29 @@
+.actions {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 30px 0;
+
+    background: rgba(0, 168, 118, 0.3);
+    border-top: 2px solid #5FD4B1;
+}
+
+.actions-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions-item {
+    width: 22%;
+}
+
+.actions h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.actions a, .actions p {
+    font-size: 13px;
+}
